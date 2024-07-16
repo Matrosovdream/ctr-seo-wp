@@ -28,22 +28,56 @@
  *      $engine['slug']          The slug of the current engine
  */
 
+/*
+echo "<pre>";
+print_r($engine);
+echo "</pre>"; 
+*/
+
+
 if (!defined('ABSPATH')) {
     exit; // Exit if accessed directly
 }
 
+// Title
+$title_parts = [];
+$titles_parts[] = $brand['name'];
+$titles_parts[] = $serie['name'];
+$titles_parts[] = $model['name'];
+$titles_parts[] = $engine['name'];
+$titles_parts[] = "Chiptuning";
+
+$title = implode(' ', $titles_parts);
+
 // Changing SEO variables by ctr-seo plugin
 global $seo_h1, $seo_text;
 if( $seo_h1 ) { $title = $seo_h1; } 
+
+// Stages stat
+$stage = end($stages);
+$max_nm = $stage['data']['nm_tuning'] - $stage['data']['nm_ori'];
+$max_hp = $stage['data']['hp_tuning'] - $stage['data']['hp_ori'];
 ?>
 <!-- START TEMPLATE -->
 
+<?php 
+include 'stages-new.php'; 
+return ;
+?>
+
+
+
+
+<?php  ?>
 <div class="ctr-container ctr-mx-auto">
 <?php if( $title ) { ?>
     <h1><?php echo $title; ?></h1>
 <?php } ?>
 
-    <?php ctr_get_template('partials/breadcrumbs.php', ['vehicle_type' => $vehicle_type, 'brand' => $brand, 'serie' => $serie, 'model' => $model, 'engine' => $engine, 'stages' => $stages]); ?>
+    <?php 
+    ctr_get_template('partials/breadcrumbs.php', ['vehicle_type' => $vehicle_type, 'brand' => $brand, 'serie' => $serie, 'model' => $model, 'engine' => $engine, 'stages' => $stages]); 
+    ?>
+    
     <div class="ctr-grid md:ctr-grid-cols-1 lg:ctr-grid-cols-2 ctr-gap-8">
         <div class="">
             <div class="ctr-grid md:ctr-grid-cols-2 lg:ctr-grid-cols-4 ctr-pl-8 ">
@@ -60,7 +94,7 @@ if( $seo_h1 ) { $title = $seo_h1; }
     <div class="ctr-grid md:ctr-grid-cols-1 lg:ctr-grid-cols-2  ctr-gap-8">
         <div>
         <div class="ctr-mt-5 ctr-text-center ctr-place-content-center" >
-            <?php ctr_get_template('partials/stage-table.php', ['stages' => $stages, 'show_price' => $show_price, 'currency' => $currency]); ?>
+            <?php ctr_get_template('partials/stage-table-new.php', ['stages' => $stages, 'show_price' => $show_price, 'currency' => $currency]); ?>
             </div>
         </div>
         <div class="ctr-h-90 ctr-mb-8 ctr-mx-10 ctr-transition ctr-brightness-50 hover:ctr-brightness-100 hover:ctr-bg-center ctr-bg-no-repeat ctr-bg-contain ctr-bg-center ctr-text-center" style="
@@ -102,3 +136,7 @@ if( $seo_h1 ) { $title = $seo_h1; }
 </div>
 
 <!-- END TEMPLATE -->
+
+stages
+
+

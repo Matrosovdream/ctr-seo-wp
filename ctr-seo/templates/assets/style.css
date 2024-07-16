@@ -1,0 +1,170 @@
+
+/* 
+Theme Name: Hello Elementor Child
+Theme URI: https://github.com/elementor/hello-theme-child/
+Description: Hello Elementor Child is a child theme of Hello Elementor, created by Elementor team
+Author: Elementor Team
+Author URI: https://elementor.com/
+Template: hello-elementor
+Version: 2.0.0
+Text Domain: hello-elementor-child
+License: GNU General Public License v3 or later.
+License URI: https://www.gnu.org/licenses/gpl-3.0.html
+Tags: flexible-header, custom-colors, custom-menu, custom-logo, editor-style, featured-images, rtl-language-support, threaded-comments, translation-ready
+*/
+
+/* Add your custom styles here */
+
+
+.open-data-rdw input {
+  font-family: kentekenFont !important;
+  width: 100% !important;
+  /*line-height: 60px !important;*/
+  font-size: 24px !important;
+  font-weight: bold !important;
+  text-align: center !important;
+  text-transform: uppercase !important;
+  padding: 0 5px 0 22px !important;
+  color: #000000 !important;
+  height: 57px !important;
+  position: relative !important;
+  /*top: 4px !important;*/
+  border: 2px solid black !important;
+  background: #F9BA00 !important;
+  border-radius: 5px !important;
+  margin-bottom: 0px;
+}
+
+.open-data-rdw:before {
+  content: '';
+  background: url(./assets/images/plate.svg) no-repeat;
+  height: 53px;
+  width: 30px;
+  margin-top: 2px;
+  margin-left: 2px;
+  display: block;
+  position: absolute;
+  z-index: 2;
+  background-size: 26px;
+}
+
+.ctr-footer-seo {
+  padding: 30px 0;
+}
+
+.stages-section-header {
+  background-color: transparent;
+  background-image: linear-gradient(105deg, #FDC411 85%, #20201F00 0%);
+}
+
+.stages-section-header h1 {
+  color: #000000;
+  font-family: "Barlow", Sans-serif;
+  font-size: 42px;
+  font-weight: 800;
+  line-height: 20px;
+  letter-spacing: -0.7px;
+  margin-bottom: 23px;
+}
+
+.elementor-background-overlay.section-one {
+  background-image: url(/wp-content/uploads/2023/09/24572776_sl_031520_28970_10-1-scaled.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.5;
+}
+
+.stages-section-form {
+  background-color: #5E610173;
+  padding-bottom: 50px;
+}
+
+.elementor-background-overlay.section-two {
+  background-image: url(/wp-content/uploads/2023/09/24572776_sl_031520_28970_10-1-scaled.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.5;
+  transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+}
+
+.stages-section-description {
+  padding: 50px 0;
+}
+
+.stages-section-description h2 {
+  font-size: 43px;
+  font-weight: 800;
+  color: #000;
+}
+
+.elementor-602 .elementor-element.elementor-element-ea517f1 .elementor-divider-separator {
+  width: 175px;
+  margin: 0 auto;
+  margin-left: 0;
+}
+
+.elementor-602 .elementor-element.elementor-element-ea517f1 {
+  --divider-border-style: parallelogram;
+  --divider-color: #FDC411;
+  --divider-pattern-height: 15px;
+  --divider-pattern-size: 25px;
+}
+
+.middle-size-text-block {
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.elementor-widget .elementor-icon-list-item {
+  margin-bottom: 10px;
+}
+
+.stages-section-calc {
+  padding: 30px 0;
+}
+
+.stages-section-calc h2 {
+  text-align: center;
+  padding-bottom: 15px;
+  font-size: 45px;
+}
+
+.stages-section-form h2 {
+  text-align: center;
+  padding: 25px;
+  font-size: 45px;
+  font-weight: 800;
+  color: #000;
+}
+
+.kenteken {
+  width: auto!important;
+  height: auto!important;
+}
+
+
+
+@media (max-width: 767px) {
+  
+  .stages-section-header h1 {
+    line-height: 32px !important;
+  font-size: 24px;
+
+  }
+ 
+.ctr-m-5 {
+  margin: 0.25rem;
+}
+
+.ctr-pl-8 {
+  padding-left: 0rem;
+} 
+
+.ctr-pr-8 {
+  padding-right: 0rem;
+}
+
+
+}
