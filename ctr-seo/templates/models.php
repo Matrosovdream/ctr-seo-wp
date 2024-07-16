@@ -31,15 +31,62 @@ global $seo_h1, $seo_text;
 if( $seo_h1 ) { $title = $seo_h1; } 
 ?>
 <!-- START TEMPLATE -->
-
+    <section
+        class="stages-section-header elementor-section elementor-top-section elementor-element elementor-element-4262a99 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+        data-id="4262a99" data-element_type="section"
+        data-settings="{&quot;background_background&quot;:&quot;gradient&quot;}">
+        <div class="elementor-container elementor-column-gap-default">
+            <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-f2b6da5"
+                data-id="f2b6da5" data-element_type="column"
+                data-settings="{&quot;background_background&quot;:&quot;gradient&quot;}">
+                <div class="elementor-widget-wrap elementor-element-populated">
+                    <section
+                        class="elementor-section elementor-inner-section elementor-element elementor-element-46809fe elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+                        data-id="46809fe" data-element_type="section">
+                        <div class="elementor-container elementor-column-gap-default">
+                            <div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-394d931"
+                                data-id="394d931" data-element_type="column">
+                                <div class="elementor-widget-wrap elementor-element-populated">
+                                    <div class="elementor-element elementor-element-1bdbe21 elementor-widget elementor-widget-text-editor"
+                                        data-id="1bdbe21" data-element_type="widget"
+                                        data-widget_type="text-editor.default">
+                                        <div class="elementor-widget-container">
+                                        <?php 
+                                        ctr_get_template('partials/breadcrumbs-new.php', 
+                                            [
+                                            'vehicle_type' => $vehicle_type, 
+                                            'brand' => $brand, 
+                                            'serie' => $serie, 
+                                            'model' => $model, 
+                                            'engine' => $engine, 
+                                            'stages' => $stages
+                                            ]
+                                        ); 
+                                        ?>
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="elementor-element elementor-element-7f5dbe0 elementor-widget elementor-widget-heading"
+                                        data-id="7f5dbe0" data-element_type="widget" data-widget_type="heading.default">
+                                        <div class="elementor-widget-container">
+                                            <h1 class="elementor-heading-title elementor-size-default">
+                                                <?php echo $title; ?>
+                                            </h1>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </section>
 <div class="ctr-container ctr-mx-auto">
-<?php if( $title ) { ?>
-    <h1><?php echo $title; ?></h1>
-<?php } ?>
 
-<?php ctr_get_template('partials/breadcrumbs.php', ['vehicle_type' => $vehicle_type, 'brand' => $brand, 'serie' => $serie]); ?>
     <!-- <em><?php if(isset($serie['seo_description'])) { echo $serie['seo_description']; } ?></em><br/><br/> -->
 
+<br>
     <p class="ctr-text-lg ctr-text-center"><?php _e('Select a model for', 'ctr');?>  <?php echo $brand['name']; ?> <?php echo $serie['name']; ?></p>
     <div class="ctr-grid ctr-grid-cols-2 md:ctr-grid-cols-4 lg:ctr-grid-cols-6 ctr-pl-8 ctr-pr-8">
     <?php foreach($models as $model) { ?>
@@ -65,3 +112,5 @@ if( $seo_h1 ) { $title = $seo_h1; }
 </div>
 
 <!-- END TEMPLATE -->
+
+models
